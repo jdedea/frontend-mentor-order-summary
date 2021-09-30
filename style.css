@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background-color: var(--pale-blue);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 375px;
+  background: white;
+  margin: 20px;
+  border-radius: 20px;
+  font-family: 'Red Hat Display';
+  text-align: center;
+}
+
+.card__hero {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__header {
+  margin: 20px 0px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card__info {
+  max-width: 275px;
+  margin: 0 auto;
+  color: #8a8ea2;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.card__plan {
+  background-color: var(--very-pale-blue);
+  display: flex;
+  margin: 24px;
+  padding: 24px;
+  border-radius: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__details {
+  display: flex;
+}
+
+.card__details div {
+  margin-left: 20px;
+}
+
+.card__plan a {
+  color: var(--dark-blue);
+}
+
+.card__plan a:hover {
+  color: #756cf2;
+  text-decoration: none;
+}
+
+.card__actions {
+  padding-bottom: 20px;
+}
+
+.button {
+  width: 85%;
+  padding: 16px;
+  font-weight: 700;
+  color: #8a8ea2;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button--cancel:hover {
+  color: black;
+  transition: color 0.15s;
+}
+
+.button--primary {
+  background-color: var(--bright-blue);
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0px 18px 10px var(--pale-blue);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #756cf2;
+  transition: background-color 0.15s;
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url('img/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+
+  .card__header {
+    margin-top: 35px;
+  }
+
+  .card__info {
+    max-width: 300px;
+  }
+
+  .card__plan {
+    margin: 20px 55px;
+  }
+
+  .button {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: 100%;
+  }
+}
